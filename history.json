@@ -138,5 +138,25 @@
         "Date": "2026-08-20 09:45",
         "Played song for(seconds)": 300,
         "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "The Game of Love",
+        "Duration": 322,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-20 09:55",
+        "Played song for(seconds)": 300,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "The Game of Love",
+        "Duration": 322,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-20 09:55",
+        "Played song for(seconds)": 300,
+        "Application": "com.apple.Music"
     }
 ]
