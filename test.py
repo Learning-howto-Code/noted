@@ -12,23 +12,24 @@ import json
 import time
 from openrouter import OpenRouter
 from pathlib import Path
-history_file =  Path(__file__).parent / "history.json"
+
+model = 'poolside/laguna-s-2.1:free'
 load_dotenv()
-model = "google/gemini-3.6-flash"
-nowplaying = "/opt/homebrew/bin/nowplaying-cli"
 
-def get_song():
-    global nowplaying
-    info = subprocess.run([nowplaying, "get", "artist", "title", "MediaType", "duration"], capture_output=True, text=True)
-    song_dict= info.stdout.strip().split("\n")
-    song_dict= dict(zip(["artist", "title", "MediaType", "duration"], song_dict))
-    print(song_dict)
-    print(song_dict["artist"])
-    return song_dict
 
-song_dict = get_song()
+song_dict = {
+        "Artist": "Daft Punk",
+        "Title": "Give Life Back to Music",
+        "Duration": 274.4030612244898,
+        "Genre": "Pop",
+        "Description": "Disco-funk, euphoric, celebratory, live-band, analog, punchy, glossy, shimmering, dancefloor, retro-futuristic, triumphant",
+        "Date": "2026-08-01 17:15",
+        "Played song for(seconds)": 0.024352626,
+        "Application": "com.apple.Music"
+    }
+
 def get_song_info(song_dict):
-
+    global HCAI
     HCAI = os.getenv("HCAI")
     print("loaded api key")
     client = OpenRouter(
@@ -39,53 +40,14 @@ def get_song_info(song_dict):
     response = client.chat.send(
         model=model,
         messages=[
-            {"role": "system", "content": f"You describe the vibe of a song in 8-12 words. Output a comma-separated list of descriptors covering genre, mood, texture, and setting. Do not write a full sentence. Go beyond one-word labels like \"pop\" or \"rock\" — be specific and evocative. If you don't know the song, infer from the artist's typical style. Output only the descriptors. No preamble, no quotes, no trailing period. If you don't know the song, DO NOT GUESS UNDER ANY CIRCUMSTANCES, instead say genre unknown  The song you are describing is {song_dict['title']} by {song_dict['artist']}."},
+            {"role": "user", "content": f"You describe the vibe of a song in 8-12 words. Output a comma-separated list of descriptors covering genre, mood, texture, and setting. Do not write a full sentence. Go beyond one-word labels like \"pop\" or \"rock\" — be specific and evocative. If you don't know the song, infer from the artist's typical style. Output only the descriptors. No preamble, no quotes, no trailing period. If you don't know the song, DO NOT GUESS UNDER ANY CIRCUMSTANCES, instead say genre unknown  The song you are describing is {song_dict['Title']} by {song_dict['Artist']}. The given genre is "},
         ],
         stream=False,
     )
-    print(f"message was You describe the vibe of a song in 8-12 words. Output a comma-separated list of descriptors covering genre, mood, texture, and setting. Do not write a full sentence. Go beyond one-word labels like \"pop\" or \"rock\" — be specific and evocative. If you don't know the song, infer from the artist's typical style. Output only the descriptors. No preamble, no quotes, no trailing period.  The song you are describing is {song_dict['title']} by {song_dict['artist']}.")
+    print(f"message was You describe the vibe of a song in 8-12 words. Output a comma-separated list of descriptors covering genre, mood, texture, and setting. Do not write a full sentence. Go beyond one-word labels like \"pop\" or \"rock\" — be specific and evocative. If you don't know the song, infer from the artist's typical style. Output only the descriptors. No preamble, no quotes, no trailing period.  The song you are describing is {song_dict['Title']} by {song_dict['Artist']}.")
     print("sent response")
     response = response.choices[0].message.content
     print("got response")
     print(response)
     return response
-def log_song(song_dict, response, elapsed_time):
-    global current
-    with open(history_file, "r")as f:
-        try:
-            old = json.load(f)
-        except json.JSONDecodeError:
-            old = []
-    if (song_dict["duration"]) == 'null':
-        duration = 0
-    else:
-        duration= float(song_dict["duration"])
-    m,s = divmod(int(duration), 60)
-    duration = f"{m}:{s:02d}"
-
-    current={
-        "Artist": song_dict["artist"],
-        "Title": song_dict["title"],
-        "Duration": duration,
-        "Description": response,
-        "Date": time.strftime("%Y-%m-%d %H:%M", time.localtime()),
-        "Played song for(seconds)": elapsed_time
-    }
-
-
-    old.append(current)
-    with open(history_file, "w") as i:
-        json.dump(old, i, indent=4) 
-    # print(info)
-def check_location():
-    global nowplaying
-    getraw = subprocess.run([nowplaying, "get-raw"], capture_output=True, text=True)
-    raw=  getraw.stdout.strip().split("\n")
-    print(raw)
-    raw_dict = json.load(raw[0])
-    print(raw_dict)
-    
-old_song= None
-elapsed_time = 0
-old_song_dict = song_dict
-check_location()
+response = get_song_info(song_dict)

@@ -1,26 +1,142 @@
 [
     {
-        "Artist": "SplashFoam",
-        "Title": "M04   B002   Doctor Clean Idea V1 16x9",
-        "Duration": "2:48",
-        "Description": "genre unknown",
-        "Date": "2026-07-30 16:15",
-        "Played song for(seconds)": 0
+        "Artist": "Daft Punk",
+        "Title": "Giorgio by Moroder",
+        "Duration": 544.6291156462585,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 14:37",
+        "Played song for(seconds)": 0,
+        "Application": "com.apple.Music"
     },
     {
-        "Artist": "SplashFoam",
-        "Title": "M04   B002   Doctor Clean Idea V1 16x9",
-        "Duration": "2:48",
-        "Description": "genre unknown",
-        "Date": "2026-07-30 16:15",
-        "Played song for(seconds)": 5
+        "Artist": "Daft Punk",
+        "Title": "Giorgio by Moroder",
+        "Duration": 544.6291156462585,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 14:37",
+        "Played song for(seconds)": 10,
+        "Application": "com.apple.Music"
     },
     {
-        "Artist": "Jeff Guo",
-        "Title": "I asked Fable 5 to make me a lyric video",
-        "Duration": "3:17",
-        "Description": "genre unknown",
-        "Date": "2026-07-30 19:57",
-        "Played song for(seconds)": 6930
+        "Artist": "Daft Punk",
+        "Title": "Within",
+        "Duration": 228.5091156462585,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 14:38",
+        "Played song for(seconds)": 65,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk & Julian Casablancas",
+        "Title": "Instant Crush",
+        "Duration": 337.56244897959186,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 14:58",
+        "Played song for(seconds)": 135,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk & Pharrell Williams",
+        "Title": "Lose Yourself to Dance",
+        "Duration": 353.8957823129252,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 16:24",
+        "Played song for(seconds)": 0,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Cage the Elephant",
+        "Title": "Come a Little Closer",
+        "Duration": 229.34666666666666,
+        "Genre": "Alternative",
+        "Description": null,
+        "Date": "2026-08-19 19:29",
+        "Played song for(seconds)": 0,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Cage the Elephant",
+        "Title": "Come a Little Closer",
+        "Duration": 229.34666666666666,
+        "Genre": "Alternative",
+        "Description": null,
+        "Date": "2026-08-19 19:29",
+        "Played song for(seconds)": 5,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "Give Life Back to Music",
+        "Duration": 274.4030612244898,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 19:29",
+        "Played song for(seconds)": 5,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "Contact",
+        "Duration": 381.3509523809524,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 19:30",
+        "Played song for(seconds)": 0,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "Contact",
+        "Duration": 381.3509523809524,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 19:37",
+        "Played song for(seconds)": 300,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "Contact",
+        "Duration": 381.3509523809524,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-19 19:37",
+        "Played song for(seconds)": 300,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "Give Life Back to Music",
+        "Duration": 274,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-20 08:43",
+        "Played song for(seconds)": 0,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "Give Life Back to Music",
+        "Duration": 274.4030612244898,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-20 09:45",
+        "Played song for(seconds)": 300,
+        "Application": "com.apple.Music"
+    },
+    {
+        "Artist": "Daft Punk",
+        "Title": "Give Life Back to Music",
+        "Duration": 274,
+        "Genre": "Pop",
+        "Description": null,
+        "Date": "2026-08-20 09:45",
+        "Played song for(seconds)": 300,
+        "Application": "com.apple.Music"
     }
 ]
