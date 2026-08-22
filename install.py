@@ -49,6 +49,10 @@ r = subprocess.run(
 python = os.path.join(root, "venv/bin/python")
 logs = root / "logs"
 logs.mkdir(exist_ok=True)
+
+# adds api key to .env file
+with open(".env", "a")as f:
+    f.write(f"HCAI={input('Enter your Hackclub AI api key here: ')}\n")
 #creates .plist file
 LABEL = "local.jake.musictracker"
 # creates plist file, than dumps to it
