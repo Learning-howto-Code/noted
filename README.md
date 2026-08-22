@@ -34,7 +34,7 @@ As someone that listens to toooons of music, I found that spotify was feeding me
 
 - Please note that due to the core architecture of this project, it fundamentally only works on macs.
 - Clone the repo, then double click the install.command file in finder
-
+- create a .env, and add your ai.hackclub.com api key as HCAI=xxx
 # AI statement
 
 Claude was consulted for explaining errors, asking how to do things, and general educational assistance, though all of the code is hand written by me. This readme was properly formatted with claude too, though every single word is mine.
