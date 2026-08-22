@@ -1238,5 +1238,15 @@
         "Date": "2026-08-21 18:34",
         "Played song for(seconds)": 5,
         "Application": "com.spotify.client"
+    },
+    {
+        "Artist": "Disney+",
+        "Title": "The final season of FX's The Bear",
+        "Duration": 28.999,
+        "Genre": null,
+        "Description": "Advertisement, IGNORE ENTRY",
+        "Date": "2026-08-21 19:55",
+        "Played song for(seconds)": 0,
+        "Application": "com.spotify.client"
     }
 ]

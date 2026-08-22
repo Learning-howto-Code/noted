@@ -35,6 +35,18 @@ As someone that listens to toooons of music, I found that spotify was feeding me
 - Please note that due to the core architecture of this project, it fundamentally only works on macs.
 - Clone the repo, then double click the install.command file in finder
 - create a .env, and add your ai.hackclub.com api key as HCAI=xxx
+- for the MCP server on claude, go to settings, and add this into your claude_desktop_config.json
+   "mcpServers": {
+    "music-vibes": {
+      "command": "/Users/jakehopkins/Projects/music-tracker/venv/bin/python",
+      "args": [
+        "/Users/jakehopkins/Projects/music-tracker/mcp_server.py"
+      ]
+    }
+  },
+
 # AI statement
 
-Claude was consulted for explaining errors, asking how to do things, and general educational assistance, though all of the code is hand written by me. This readme was properly formatted with claude too, though every single word is mine.
+Claude was consulted for explaining errors, asking how to do things, and general educational assistance, though all of the code is hand written by me. This readme was properly formatted with claude too, though every single word is mine. 
+
+While I know that Hackclub isn't a huge fan of ai projects, this primarily isn't, it just also has a mcp server, which I think are tools that we must embrace, as AI models aren't going anywhere anytime soon
