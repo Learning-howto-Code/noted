@@ -26,14 +26,14 @@ As someone that listens to toooons of music, I found that spotify was feeding me
 
 # Dependencies:
 
-- Pip install requirements.txt
-- nowplaying-cli "brew install nowplaying-cli"
-- HCAI key in a .env file, with your api key from ai.hackclub.com
-- This has only been tested on macos tahoe, and not guaranteed to work with other os versions
+- Brew
+- Git
+- Python 3
 
 # Install
 
 - Please note that due to the core architecture of this project, it fundamentally only works on macs.
+- Clone the repo, then double click the install.command file in finder
 
 # AI statement
 
