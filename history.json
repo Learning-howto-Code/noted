@@ -1218,5 +1218,25 @@
         "Date": "2026-08-21 18:05",
         "Played song for(seconds)": 5,
         "Application": "com.spotify.client"
+    },
+    {
+        "Artist": "LA LOM",
+        "Title": "Lorena",
+        "Duration": 241.999,
+        "Genre": null,
+        "Description": "genre unknown",
+        "Date": "2026-08-21 18:34",
+        "Played song for(seconds)": 5,
+        "Application": "com.spotify.client"
+    },
+    {
+        "Artist": "Five and Tens",
+        "Title": "Today Can't Catch Tomorrow",
+        "Duration": 222.96,
+        "Genre": null,
+        "Description": "relaxed acoustic surf folk, warm mellow strumming, sunlit sandy coastal porch",
+        "Date": "2026-08-21 18:34",
+        "Played song for(seconds)": 5,
+        "Application": "com.spotify.client"
     }
 ]
