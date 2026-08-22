@@ -5,18 +5,21 @@ import os
 import plistlib
 from pathlib import Path
 import subprocess
+import shutil
 
 root = Path(__file__).resolve().parent
 print(root)
-
-#brew installs now playing-cli
-r = subprocess.run(
+#checks for nowplaying-cli, installs if not found
+if not Path("/opt/homebrew/bin/nowplaying-cli").exists():
+    #brew installs now playing-cli
+    r = subprocess.run(
     ["brew", "install", "nowplaying-cli"],
-        capture_output=True,
         text=True,
         check=True,
 )
-print("installed nowplaying-cli")
+    print("installed nowplaying-cli")
+else:
+    print("nowplaying-cli already installed")
 #checks for venv, makes one otherwise
 if not (root / "venv").is_dir():
     r = subprocess.run(
@@ -30,7 +33,6 @@ print(venv)
 #installs python libs
 r = subprocess.run(
     ["venv/bin/python", "-m", "pip", "install", "-r", "requirements.txt"],
-        capture_output=True,
         text=True,
         check=True,
 )
